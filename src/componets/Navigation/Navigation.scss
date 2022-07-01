@@ -1,0 +1,16 @@
+@import "../../_colors.scss";
+
+.nav {
+    background-color: $dark-color !important;
+    min-height: 60px;
+
+    .nav-link {
+        border-radius: 10px;
+        border: 1px solid transparent;
+
+        &:hover {
+            border-color: $lightgray-color;
+            background-color: $gray-color !important;
+        }
+    }
+}
