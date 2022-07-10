@@ -1,25 +1,35 @@
 import "./Navigation.scss";
 
 import { Navbar, Container, Nav } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap';
+
+import { RouteObject } from "../../types";
 
 interface props {
   brandName: string, 
-  links: { link: string, label: string }[] 
+  links: RouteObject[] 
 }
 
 function Navigation(props: props) {
   return (
     <Navbar className="nav" role="navigation" bg="dark" sticky="top" variant="dark" expand="lg">
       <Container>
+        <LinkContainer to="/"> 
         <Navbar.Brand>{props.brandName}</Navbar.Brand>
+        </LinkContainer>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse>
           <Nav className="ml-auto"> {
               props.links.map((item, key) => {
-                return <Nav.Link className="nav-link" key={key} href={item.link} >
-                  {item.label}
-                </Nav.Link>
+                return (
+                    <LinkContainer key={key} to={item.path}>
+                      <Nav.Link className="nav-link" > 
+                        {item.label}
+                      </Nav.Link>
+                    </LinkContainer>
+                )
               })
             }
           </Nav>
