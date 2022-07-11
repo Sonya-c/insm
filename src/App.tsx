@@ -9,6 +9,7 @@ import Navigation from "./componets/Navigation/Navigation";
 import Footer from "./componets/Footer/Footer";
 import Container from "react-bootstrap/Container";
 
+import Layout from "./pages/Layout";
 // import the pages 
 import Home from "./pages/Home/Home";
 import Servicios from "./pages/Servicios/Servicios";
@@ -22,21 +23,29 @@ const links: RouteObject[]  = [
   {
     path: "/",
     label: "Inicio",
+    title: "INSM",
+    subtitle: "Ingeniería Naval y Señalización Maritima",
     element: <Home /> 
   },
   {
     path: "/servicios",
     label: "Servicios",
+    title: "Servicios",
+    subtitle: "¿Qué podemos hacer por ti?",
     element: <Servicios />
   },
   {
     path: "/productos",
     label: "Productos",
+    title: "Productos",
+    subtitle: "¿Qué podemos ofrecerte?",
     element: <Productos />
   },
   {
     path: "/contacto",
     label: "Contacto",
+    title: "Contacto",
+    subtitle: "¿Cómo puedes encontrarnos?",
     element: <Contacto />
   }
 ]
@@ -51,7 +60,7 @@ function App() {
         <Container id="main-container">
         <Routes>{
             links.map((item, key)=> {
-                return <Route path={item.path} element={item.element} />
+                return <Route path={item.path} element={<Layout title={item.title} subtitle={item.subtitle}>{item.element}</Layout>} />
               })
             }
             <Route path="*" element={<NotFound />} />

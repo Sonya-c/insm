@@ -1,14 +1,9 @@
-import { ReactNode } from "react";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-interface SectionProps {
-  title: string,
-  subtitle: string,
-  children?: ReactNode
-}
+import { SectionProps } from  "../../types";
 
 function Section(props: SectionProps) {
   return (

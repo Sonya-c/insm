@@ -12,7 +12,7 @@ interface props {
 
 function Navigation(props: props) {
   return (
-    <Navbar className="nav" role="navigation" bg="dark" sticky="top" variant="dark" expand="lg">
+    <Navbar className="nav shadow" role="navigation" bg="dark" sticky="top" variant="dark" expand="lg">
       <Container>
         <LinkContainer to="/"> 
         <Navbar.Brand>{props.brandName}</Navbar.Brand>
