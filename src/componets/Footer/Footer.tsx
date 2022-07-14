@@ -2,8 +2,8 @@ import "./Footer.scss";
 
 function Footer() {
     return (
-        <footer>
-            INSM | 2022
+        <footer className="text-muted">
+            INSM 2022
         </footer>
     )
 }

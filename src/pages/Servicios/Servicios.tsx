@@ -1,26 +1,12 @@
 import "./Servicios.scss";
 
-import { ServicioProps } from "../../types";
+import { CardList } from "../../types";
 import { services } from "../../data/info";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
-function Servicio(props: ServicioProps) {
-    return (
-        <Row className="servicio ml-auto mr-auto mt-5">
-            <Col className="mb-5">
-                <img className="rounded img-fluid shadow" src={props.img} alt={props.title}/>
-            </Col>
-        <Col className="mb-5">
-            <p className="fw-bold">{props.title} </p>
-            <p className="text-mutted mb-4">{props.text}</p>
-        </Col>
-
-        </Row>
-    );    
-}
 
 /* todo
  * contenido de los servicios
@@ -29,11 +15,20 @@ function Servicio(props: ServicioProps) {
 function Servicios() {
     return (<Container>
         {services.map((item, key) => {
-            return <Servicio
-                        title={item.title}
-                        text={item.text}
-                        img={item.img}
-                    /> 
+            return (
+                <Row className="servicio ml-auto mr-auto mt-5">
+                    <Col className="mb-5">
+                        <img
+                            className="rounded img-fluid shadow"
+                            src={item.img} alt={item.title}/>
+                    </Col>
+                    <Col className="mb-5">
+                        <p className="fw-bold">{item.title} </p>
+                        <p className="text-mutted mb-4">{item.text}</p>
+                    </Col>
+        
+                </Row>
+               ) 
             })
         }
     </Container>);

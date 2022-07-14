@@ -1,8 +1,8 @@
-import { ServicioProps } from "../types";
+import { CardList } from "../types";
 
 export const about: string = "Ingeniería naval y señalización marítima s.a.s está conformada por un grupo experimentado de profesionales en ingeniería naval, ingeniería civil, ingeniería industrial y especialistas en señalización marítima y fluvial, hidráulica de ríos y costas.";
 
-export const services: ServicioProps[] = [
+export const services: CardList[] = [
     {
         title: "Señalización",
         text: "Diseño y ejecución de proyectos de señalización marítima y fluvial",
@@ -40,3 +40,48 @@ export const services: ServicioProps[] = [
         text: "Elaboración e implementación de sistemas de seguridad de protección de buques e instalación portuarias"
     }
 ];
+
+export const productos: CardList[] = [
+    {
+        title: "Linternas Marinas"
+    },
+    {
+        title: "Luces de remolque y puentes"
+    },
+    {
+        title: "Luces principales",
+    },
+    {
+        title: "Luces para plataformas petroleras y casíferas"
+    },
+    {
+        title: "Luces de enfliación"
+    },
+    {
+        title: "Sistemas de control y monitoreo"
+    },
+    {
+        title: "Fuentes de alimentación"
+    },
+    {
+        title: "Boyas marinas"
+    },
+    {
+        title: "Accesorios"
+    }
+]
+
+export const social_media: CardList[] = [
+    {
+        title: "Correo",
+        text: "info@insm.com.co"
+    },
+    {
+        title: "Celular",
+        text: "number",
+    },
+    {
+        title: "Dirección",
+        text: "addres",
+    }
+]

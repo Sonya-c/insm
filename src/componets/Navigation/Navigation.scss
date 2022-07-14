@@ -7,8 +7,10 @@
     .nav-link {
         border-radius: 10px;
         border: 1px solid transparent;
-
+        
         &:hover {
+            padding-left: 10px;
+            padding-right: 10px;
             border-color: $lightgray-color;
             background-color: $gray-color !important;
         }

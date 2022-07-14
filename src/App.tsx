@@ -7,9 +7,10 @@ import { BrowserRouter as Router, Routes, Route, HashRouter} from "react-router-
 // Import the common components
 import Navigation from "./componets/Navigation/Navigation";
 import Footer from "./componets/Footer/Footer";
+import Header from "./componets/Header/Header";
+
 import Container from "react-bootstrap/Container";
 
-import Layout from "./pages/Layout";
 // import the pages 
 import Home from "./pages/Home/Home";
 import Servicios from "./pages/Servicios/Servicios";
@@ -60,7 +61,12 @@ function App() {
         <Container id="main-container">
         <Routes>{
             links.map((item, key)=> {
-                return <Route path={item.path} element={<Layout title={item.title} subtitle={item.subtitle}>{item.element}</Layout>} />
+                return <Route path={item.path} element={
+                    <>
+                        <Header title={item.title} subtitle={item.subtitle} />
+                        {item.element}
+                    </>
+                    } />
               })
             }
             <Route path="*" element={<NotFound />} />

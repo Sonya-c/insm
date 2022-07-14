@@ -5,7 +5,40 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-
-    
   }
+}
+
+section#about p {
+    max-width: 900px;
+    margin: auto;
+}
+.bs-gray {
+    background: linear-gradient(135deg, #f8faff, #fef7fd);
+}
+
+.bg-light-blue {
+    background: #eff2fe !important;
+}
+        
+.bg-light-cyan {
+    background: #e8fdff !important;
+}
+
+section {
+
+    border-radius: 10px;
+
+
+    .card {
+        max-width: 500px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+
+        .card-body {
+            border-radius: 10px;
+        }
+        
+    }
 }
