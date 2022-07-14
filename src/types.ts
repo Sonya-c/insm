@@ -23,7 +23,7 @@ export interface SectionProps extends HeaderProps {
   className?: string,
 }
 
-export interface CardList {
+export interface CardTypes {
     title: string,
     text?: string,
     img?: string

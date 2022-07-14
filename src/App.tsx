@@ -8,15 +8,17 @@ import { BrowserRouter as Router, Routes, Route, HashRouter} from "react-router-
 import Navigation from "./componets/Navigation/Navigation";
 import Footer from "./componets/Footer/Footer";
 import Header from "./componets/Header/Header";
+import CardList from "./componets/CardList/CardList";
 
 import Container from "react-bootstrap/Container";
 
 // import the pages 
 import Home from "./pages/Home/Home";
-import Servicios from "./pages/Servicios/Servicios";
-import Productos from "./pages/Productos/Productos";
 import Contacto from "./pages/Contacto/Contacto";
 import NotFound from "./pages/NotFound/NotFound";
+
+// import data
+import { servicios, productos } from "./data/info";
 
 import { RouteObject } from "./types";
 
@@ -33,14 +35,14 @@ const links: RouteObject[]  = [
     label: "Servicios",
     title: "Servicios",
     subtitle: "¿Qué podemos hacer por ti?",
-    element: <Servicios />
+    element: <CardList list={servicios} />
   },
   {
     path: "/productos",
     label: "Productos",
     title: "Productos",
     subtitle: "¿Qué podemos ofrecerte?",
-    element: <Productos />
+    element: <CardList list={productos} />
   },
   {
     path: "/contacto",
@@ -54,29 +56,23 @@ const links: RouteObject[]  = [
 function App() {
   return (
     <React.StrictMode>
-    
     <HashRouter >
         <Navigation brandName={"INSM"} links={links} />
 
         <Container id="main-container">
-        <Routes>{
-            links.map((item, key)=> {
-                return <Route path={item.path} element={
-                    <>
-                        <Header title={item.title} subtitle={item.subtitle} />
-                        {item.element}
-                    </>
-                    } />
+            <Routes> { links.map((item, key)=> { 
+                return <Route path={item.path} element={<>
+                    <Header title={item.title} subtitle={item.subtitle} />
+                    {item.element}
+                </>} />
               })
             }
             <Route path="*" element={<NotFound />} />
-        </Routes>
+            </Routes>
         </Container>
-        
-        <Footer />
 
+        <Footer />
     </HashRouter>
-    
     </React.StrictMode>
   );
 }

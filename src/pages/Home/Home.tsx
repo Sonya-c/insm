@@ -1,6 +1,6 @@
 import "./Home.scss";
 
-import { about, services, productos, social_media } from "../../data/info";
+import { about, servicios, productos, social_media } from "../../data/info";
 
 import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
@@ -11,23 +11,27 @@ import Button from "react-bootstrap/Button";
 import Header from "../../componets/Header/Header";
 import Section from "./Section";
 
-/* hero banner: 3 image and title
- * about 
- * some project 
- * some services
- * contact form
- */
 function Home() {
-
-    return (
-    <>
-      <Section id="about" title="Acerca de Nosotros" subtitle="Más de 20 años de experiencia" >
+    return (<>
+      <Section
+            id="about"
+            title="Acerca de Nosotros"
+            subtitle="Más de 20 años de experiencia" >
         <p>{ about }</p>
       </Section >
 
-      <Section id="servicios" className="bs-gray" title="Servicios" subtitle="Que podemos hacer por ti" >
-        <Row className="row-cols-1 row-cols-md-2 mt-3 d-flex justify-content-center">
-            {services.map((item, key) => {
+      <Section
+            id="servicios"
+            className="bs-gray"
+            title="Servicios"
+            subtitle="Que podemos hacer por ti" >
+
+        <Row className="row-cols-1
+                        row-cols-md-2
+                        mt-3
+                        d-flex
+                        justify-content-center">
+            {servicios.map((item, key) => {
                 return (
                 <Col key={key} className="mb-4">
                     <Card className="">
@@ -38,8 +42,7 @@ function Home() {
                     </Card.Body>
                     </Card>
                 </Col>
-              );
-            }
+              )}
             )}
         </Row>
 
@@ -84,7 +87,9 @@ function Home() {
                         <Col className="mb-4">
                             <Card>
                                 <Card.Body className="shadow px-4 py-5 px-md-5">
-                                    <Card.Title className="mb-2">{item.title}</Card.Title>
+                                    <Card.Title className="mb-2">
+                                        {item.title}
+                                    </Card.Title>
                                     <Card.Text>{item.text}</Card.Text>
                                 </Card.Body>
                             </Card>

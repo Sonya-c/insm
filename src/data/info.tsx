@@ -1,8 +1,8 @@
-import { CardList } from "../types";
+import { CardTypes } from "../types";
 
 export const about: string = "Ingeniería naval y señalización marítima s.a.s está conformada por un grupo experimentado de profesionales en ingeniería naval, ingeniería civil, ingeniería industrial y especialistas en señalización marítima y fluvial, hidráulica de ríos y costas.";
 
-export const services: CardList[] = [
+export const servicios: CardTypes[] = [
     {
         title: "Señalización",
         text: "Diseño y ejecución de proyectos de señalización marítima y fluvial",
@@ -41,7 +41,7 @@ export const services: CardList[] = [
     }
 ];
 
-export const productos: CardList[] = [
+export const productos: CardTypes[] = [
     {
         title: "Linternas Marinas"
     },
@@ -71,7 +71,7 @@ export const productos: CardList[] = [
     }
 ]
 
-export const social_media: CardList[] = [
+export const social_media: CardTypes[] = [
     {
         title: "Correo",
         text: "info@insm.com.co"

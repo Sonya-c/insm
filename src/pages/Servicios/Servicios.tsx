@@ -1,20 +1,13 @@
 import "./Servicios.scss";
-
-import { CardList } from "../../types";
-import { services } from "../../data/info";
-
+import { CardTypes } from "../../types";
+import { servicios } from "../../data/info";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
-
-/* todo
- * contenido de los servicios
- */
-
 function Servicios() {
     return (<Container>
-        {services.map((item, key) => {
+        {servicios.map((item, key) => {
             return (
                 <Row className="servicio ml-auto mr-auto mt-5">
                     <Col className="mb-5">
