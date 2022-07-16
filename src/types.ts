@@ -1,7 +1,6 @@
 
 import { ReactNode } from "react";
 
-
 // Router element. Used in the nav 
 export interface RouteObject {
     hidden?: boolean,
@@ -10,6 +9,7 @@ export interface RouteObject {
     label: string,
     title: string, 
     subtitle: string,
+    hash?: string
 }
 
 export interface HeaderProps {

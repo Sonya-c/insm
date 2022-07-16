@@ -2,7 +2,27 @@
 
 footer {
     height: 30px;
-    padding: 3px;
     box-sizing: border-box;
     text-align: center;
+    background: $dark-color !important;
+
+    > * {
+       background: $dark-color !important; 
+    }
+
+    section {
+        border-radius: 0px;
+    }
+
+    section h2, p {
+        color: $light-color !important;
+    }
+    
+    .card {
+        background: #1a2540;
+
+        .card-title {
+            color: $light-color;
+        }
+    }
 }

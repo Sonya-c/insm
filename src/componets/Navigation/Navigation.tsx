@@ -32,6 +32,14 @@ function Navigation(props: props) {
                 )
               })
             }
+
+            <Nav.Link className="nav-link" onClick={() => {
+                        const contacto = document.getElementById("contacto")
+                        if (contacto != null) contacto.scrollIntoView({behavior: 'smooth'})
+                    }
+                }>
+                Contacto
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

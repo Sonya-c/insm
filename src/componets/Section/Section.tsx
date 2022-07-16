@@ -10,7 +10,7 @@ function Section(props: SectionProps) {
     <section className={props.className} id={props.id}>
       <Container className="py-5 bg-primary-gradient text-center">
        <Row className="row-cols-1">
-        <Col md={8} xl={6} className="section-title text-center mx-auto">
+        <Col md={8} xl={6} className="text-center mx-auto">
           <p className="fw-bold mb-2 text-primary">
             {props.title}
           </p>
