@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 
 function Header(props: HeaderProps) {
   return (
-    <header className="bg-primary-gradient pt-5">
+    <header className={"bg-primary-gradient pt-5 " + props.className}>
       <Container className="pt-4 pt-xl-5">
         <Row pt={5}>
           <Col md={8} xl={6} className="text-center text-md-start mx-auto">

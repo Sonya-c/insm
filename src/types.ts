@@ -15,6 +15,7 @@ export interface RouteObject {
 export interface HeaderProps {
     title: string,
     subtitle: string
+    className?: string,
     children?: ReactNode
 }
 

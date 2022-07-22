@@ -1,11 +1,13 @@
-header {
+header.Inicio {
+    height: calc(100vh - 60px);
+    background-image: url("../../img/hero-banner.svg"), linear-gradient(#b7e2f7, #79bfe0);
+    background-position-x: left;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
 
-  #img-gallery {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
+    @media screen and (min-width: 500px) {
+        background-size: contain;
+    }
 }
 
 section#about p {

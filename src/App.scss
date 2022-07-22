@@ -1,3 +1,25 @@
 #main-container {
     min-height: calc(100vh - 60px - 30px);
 }
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #203056 #0f172a;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #203056;
+    border-radius: 10px;
+    border: 1px solid #202b46;
+}
