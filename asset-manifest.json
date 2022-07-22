@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/insm/static/css/main.eb3b9171.css",
-    "main.js": "/insm/static/js/main.9a25a1a5.js",
+    "main.css": "/insm/static/css/main.e7aee98c.css",
+    "main.js": "/insm/static/js/main.1857fe81.js",
+    "static/media/hero-banner.svg": "/insm/static/media/hero-banner.91661eaecca340516860.svg",
     "index.html": "/insm/index.html",
-    "main.eb3b9171.css.map": "/insm/static/css/main.eb3b9171.css.map",
-    "main.9a25a1a5.js.map": "/insm/static/js/main.9a25a1a5.js.map"
+    "main.e7aee98c.css.map": "/insm/static/css/main.e7aee98c.css.map",
+    "main.1857fe81.js.map": "/insm/static/js/main.1857fe81.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb3b9171.css",
-    "static/js/main.9a25a1a5.js"
+    "static/css/main.e7aee98c.css",
+    "static/js/main.1857fe81.js"
   ]
 }
